@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "RankMatch: GUI",
+      "request": "launch",
+      "mainClass": "rankmatch.RankMatchGui",
+      "cwd": "${workspaceFolder}",
+      "classPaths": ["${workspaceFolder}/obj/classes"],
+      "preLaunchTask": "RankMatch: Build",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "RankMatch: Console",
+      "request": "launch",
+      "mainClass": "rankmatch.RankMatch",
+      "cwd": "${workspaceFolder}",
+      "classPaths": ["${workspaceFolder}/obj/classes"],
+      "preLaunchTask": "RankMatch: Build",
+      "console": "integratedTerminal"
+    }
+  ]
+}
