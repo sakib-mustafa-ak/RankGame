@@ -41,6 +41,16 @@ offers **RankMatch: Build** and **RankMatch: Test** tasks.
 The test runner needs no third-party libraries. Its `main` method throws on
 any failed check and reports the number of successful checks.
 
+## Windows executable
+
+Run `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\build-exe.ps1`
+with a Java 17+ JDK that includes `jpackage`. If the JDK is elsewhere, pass
+`-JdkBin 'C:\path\to\jdk\bin'`. The script creates
+`deliverables\RankMatch\RankMatch.exe` and `deliverables\RankMatch-Windows.zip`.
+The ZIP contains the executable and its bundled Java runtime. Extract the
+whole ZIP before running the executable; keep its `app` and `runtime` folders
+beside it. The app saves `highscores.txt` in its working directory.
+
 ## Score interpretation
 
 The specification's worked example uses `(guess - cards dealt) / matches`.
